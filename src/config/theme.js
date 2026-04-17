@@ -23,13 +23,18 @@ html, body, #root {
   font-family: 'DM Sans', sans-serif;
   height: 100%;
   background: ${({ theme }) => theme.palette.background.default};
+  color: ${({ theme }) => theme.palette.text.primary};
+  margin: 0px !important;
+  padding: 0px !important;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', sans-serif;
     margin-bottom: 0px !important;
     margin-top: 0px !important;
 }
- 
+p{
+  margin: 0 !important;
+}
 .ant-input-number-group-wrapper{
     width: 100%
 }
@@ -56,16 +61,17 @@ input[type=number] {
 
 input:-webkit-autofill,
 textarea:-webkit-autofill,
-select:-webkit-autofill,
-.ant-input-affix-wrapper>input.ant-input:focus,
-.ant-input-outlined:focus-within, .ant-select-selector {
+select:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px ${({ theme }) =>
     theme.palette.background.default} inset !important;
-    box-shadow: 0 0 0 1000px ${({ theme }) =>
-      theme.palette.background.default} inset !important;
-  -webkit-text-fill-color: ${({ theme }) =>
-    theme.palette.text.primary}  !important;
-    border-width: 2px !important;
+  box-shadow: 0 0 0 1000px ${({ theme }) =>
+    theme.palette.background.default} inset !important;
+  -webkit-text-fill-color: ${({ theme }) => theme.palette.text.primary} !important;
+}
+
+.ant-input-affix-wrapper > input.ant-input:focus,
+.ant-input-outlined:focus-within {
+  border-width: 2px !important;
 }
 
 .ant-btn-primary {
@@ -83,13 +89,13 @@ select:-webkit-autofill,
 .ant-tooltip-inner {
   color: ${({ theme }) => theme.palette.text.primary} !important;
 }
-  
+
 .ant-modal-close {
   color: ${({ theme }) => theme.palette.icon.secondary} !important;
 }
 
 svg {
-  path:is([fill="#12CC1B"]) {
+  path:is([fill="#195038"]) {
     fill:  ${({ theme }) => theme.palette.primary.main} !important;
   }
 }

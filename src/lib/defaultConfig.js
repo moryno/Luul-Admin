@@ -1,7 +1,7 @@
 export const defaultTheme = {
   theme: {
     palette: {
-      primary: { main: "#12CC1B", accentColor: "#1C2243" },
+      primary: { main: "#195038", accentColor: "#001C55" },
       secondary: { main: "#F0FDF4" },
       background: { default: "#FFFFFF", paperMobile: "#F8FAFC" },
       foreground: {
@@ -11,9 +11,15 @@ export const defaultTheme = {
         danger: "#F97970",
       },
       icon: {
-        primary: "#1C2243",
+        primary: "#6D717F",
         secondary: "#4A5354",
         error: "#F04438",
+        active: "#195038",
+        background: "#D2D5DB",
+      },
+      text: {
+        primary: "#2A2A2A",
+        secondary: "#949494",
       },
       white: "#FFFFFF",
       black: "#000",
@@ -45,7 +51,11 @@ export const defaultTheme = {
         600: "#D92D20",
       },
       orange: "#FF6400",
-
+      borderColor: {
+        default: "#EAECF0",
+        success: "#12B76A",
+        error: "#F04438",
+      },
       boxShadowColor: "rgba(0, 0, 0, 0.07)",
       status: {
         delayed: "#C5A070",
@@ -62,9 +72,7 @@ export const defaultTheme = {
         invoiced: "#B99897",
       },
     },
-    text: {
-      color: "#101828",
-    },
+
     font: {
       family: "DM Sans",
       size: {
@@ -95,6 +103,13 @@ export const defaultTheme = {
     header: {
       height: 56,
       heightWithMargin: 68,
+    },
+    sideBar: {
+      sidebarBgColor: "#F7F9FA",
+      sidebarTextColor: "#343A40",
+      sidebarMenuItemBg: "#F9FAFB",
+      sidebarMenuSelectedBgColor: "#F0E6C2",
+      sidebarMenuSelectedTextColor: "#195038",
     },
     mobileMenu: {
       height: 60,

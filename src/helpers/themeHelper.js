@@ -3,7 +3,7 @@ export const getAntTheme = (theme) => {
     colorPrimary: theme.palette.primary.main,
     colorTextDescription: theme.palette.text.secondary,
     colorLink: theme.palette.primary.main,
-    colorText: theme.text.color,
+    colorText: theme.palette.text.primary,
     fontFamily: theme.font.family,
     colorBgContainer: theme.palette.background.default,
     colorBgElevated: theme.palette.background.default,

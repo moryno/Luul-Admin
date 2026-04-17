@@ -1,0 +1,99 @@
+import { createGlobalStyle } from "styled-components";
+
+import DMSans from "@/assets/fonts/DMSans-VariableFont_opsz,wght.woff2";
+import Grotesk from "@/assets/fonts/SpaceGrotesk-VariableFont_wght.woff2";
+
+const GlobalStyles = createGlobalStyle`
+  @font-face {
+    font-family: 'DM Sans';
+    src: url(${DMSans}) format('woff2-variations');
+    font-weight: 100 900;   
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url(${Grotesk}) format('woff2-variations');
+    font-weight: 100 900;   
+    font-style: normal;
+    font-display: swap;
+  }
+
+html, body, #root {
+  font-family: 'DM Sans', sans-serif;
+  height: 100%;
+  background: ${({ theme }) => theme.palette.background.default};
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+}
+ 
+.ant-input-number-group-wrapper{
+    width: 100%
+}
+.ant-input-affix-wrapper-disabled{
+  color: ${({ theme }) => theme.palette.black};
+}
+.ant-input[disabled]{
+  color: ${({ theme }) => theme.palette.black};
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.ant-tour {
+    width: auto !important;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill,
+.ant-input-affix-wrapper>input.ant-input:focus,
+.ant-input-outlined:focus-within, .ant-select-selector {
+  -webkit-box-shadow: 0 0 0 1000px ${({ theme }) =>
+    theme.palette.background.default} inset !important;
+    box-shadow: 0 0 0 1000px ${({ theme }) =>
+      theme.palette.background.default} inset !important;
+  -webkit-text-fill-color: ${({ theme }) =>
+    theme.palette.text.primary}  !important;
+    border-width: 2px !important;
+}
+
+.ant-btn-primary {
+  box-shadow: none !important;
+}
+
+.ant-input-affix-wrapper .anticon.ant-input-password-icon{
+    color: ${({ theme }) => theme.palette.icon.secondary};
+}
+
+.ant-tooltip-arrow::before,.ant-tooltip-inner {
+  background: ${({ theme }) => theme.palette.foreground.default} !important;
+}
+
+.ant-tooltip-inner {
+  color: ${({ theme }) => theme.palette.text.primary} !important;
+}
+  
+.ant-modal-close {
+  color: ${({ theme }) => theme.palette.icon.secondary} !important;
+}
+
+svg {
+  path:is([fill="#12CC1B"]) {
+    fill:  ${({ theme }) => theme.palette.primary.main} !important;
+  }
+}
+
+`;
+
+export default GlobalStyles;

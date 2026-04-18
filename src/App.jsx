@@ -1,16 +1,20 @@
+import { BrowserRouter } from "react-router-dom";
+
 import { AppThemeProvider } from "@/context";
 import { GlobalStyles } from "@/config";
-import { Dashboard } from "@/pages";
+import { Orders } from "@/pages";
 import { AppLayout } from "@/components/index";
 
 function App() {
   return (
     <>
       <AppThemeProvider>
-        <GlobalStyles />
-        <AppLayout>
-          <Dashboard />
-        </AppLayout>
+        <BrowserRouter>
+          <GlobalStyles />
+          <AppLayout>
+            <Orders />
+          </AppLayout>
+        </BrowserRouter>
       </AppThemeProvider>
     </>
   );

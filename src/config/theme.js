@@ -20,18 +20,28 @@ const GlobalStyles = createGlobalStyle`
   }
 
 html, body, #root {
-  font-family: 'DM Sans', sans-serif;
+  font-family: ${({ theme }) => theme.font.body}, sans-serif; 
   height: 100%;
   background: ${({ theme }) => theme.palette.background.default};
   color: ${({ theme }) => theme.palette.text.primary};
   margin: 0px !important;
   padding: 0px !important;
 }
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', sans-serif;
-    margin-bottom: 0px !important;
-    margin-top: 0px !important;
-}
+  h1, h2, h3, h4, h5, h6,
+  h1.ant-typography,
+  h2.ant-typography,
+  h3.ant-typography,
+  h4.ant-typography,
+  h5.ant-typography,
+  .ant-typography h1,
+  .ant-typography h2,
+  .ant-typography h3,
+  .ant-typography h4,
+  .ant-typography h5 {
+    font-family: ${({ theme }) => theme.font.heading}, sans-serif !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
 p{
   margin: 0 !important;
 }

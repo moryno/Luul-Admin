@@ -4,11 +4,14 @@ import styled from "styled-components";
 const { Header } = Layout;
 
 export const StyledAppHeader = styled(Header)`
-  position: fixed;
+  ${
+    "" /* position: fixed;
   right: 0;
   left: 0;
   top: 0;
-  z-index: 101;
+  z-index: 101; */
+  }
+  width: 100% !important;
   display: flex;
   justify-content: space-between;
   align-items: center;

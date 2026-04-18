@@ -6,14 +6,22 @@ import {
 } from "./index.styled";
 import Navbar from "../Navbar";
 import ContentView from "../ContentView";
+import { Flex } from "antd";
+import Sidebar from "../Sidebar";
 
 const Layout = ({ routes, routesConfig }) => {
   return (
     <StyledAppLayout>
-      <Navbar />
       <StyledAppLayoutMain>
         <StyledAppLayoutContent>
-          <ContentView routes={routes} />
+          <Flex>
+            <Sidebar routesConfig={routesConfig} />
+            <Flex vertical style={{ position: "relative", width: "100%" }}>
+              <Navbar />
+              {/* scroll conentview only */}
+              <ContentView routes={routes} />
+            </Flex>
+          </Flex>
         </StyledAppLayoutContent>
       </StyledAppLayoutMain>
     </StyledAppLayout>

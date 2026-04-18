@@ -75,6 +75,8 @@ export const defaultTheme = {
 
     font: {
       family: "DM Sans",
+      body: "DM Sans",
+      heading: "Space Grotesk",
       size: {
         small: "12px",
         medium: "14px",
@@ -110,6 +112,8 @@ export const defaultTheme = {
       sidebarMenuItemBg: "#F9FAFB",
       sidebarMenuSelectedBgColor: "#F0E6C2",
       sidebarMenuSelectedTextColor: "#195038",
+      sidebarMenuHoverBgColor: "#F0E6C2",
+      sidebarMenuHoverTextColor: "#195038",
     },
     mobileMenu: {
       height: 60,

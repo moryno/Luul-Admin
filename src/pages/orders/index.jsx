@@ -4,6 +4,7 @@ import {
   InputComponent,
   StyledPageTitle,
   StyledPageWrapper,
+  TableComponent,
   TabsWithText,
 } from "@/components";
 import {
@@ -12,7 +13,7 @@ import {
   IconTypeIconsMap,
   orderTypeOptions,
 } from "@/lib";
-import { Flex } from "antd";
+import { Flex, Row, Col } from "antd";
 
 import { useState } from "react";
 
@@ -20,23 +21,26 @@ const Orders = () => {
   const [activeTab, setActiveTab] = useState(null);
 
   return (
-    <StyledPageWrapper vertical gap="medium">
+    <StyledPageWrapper vertical gap="large">
       <StyledPageTitle level={3}>Orders</StyledPageTitle>
-      <Flex align="center" justify="space-between">
-        <InputComponent
-          type="search"
-          placeholder="Search for iid, name of product..."
-          suffix={<AppIcon Icon={IconTypeIconsMap[IconTypeEnum.Search]} />}
-          isFormItem
-        />
-        <Flex>
-          <AppTabs
-            // activeKey={activeTab}
-            tabItems={actionTypeOptions}
-            // onChange={onClickMenuItem}
+      <Row gutter={[24, 24]}>
+        <Col xxl={8} xl={8} lg={8} md={8} sm={12} xs={12}>
+          <InputComponent
+            type="search"
+            placeholder="Search for iid, name of product..."
+            suffix={<AppIcon Icon={IconTypeIconsMap[IconTypeEnum.Search]} />}
           />
-        </Flex>
-      </Flex>
+        </Col>
+        <Col xxl={16} xl={16} lg={16} md={16} sm={12} xs={12}>
+          <Flex justify="flex-end">
+            <AppTabs
+              // activeKey={activeTab}
+              tabItems={actionTypeOptions}
+              // onChange={onClickMenuItem}
+            />
+          </Flex>
+        </Col>
+      </Row>
       <Flex>
         <TabsWithText
           // activeKey={activeTab}
@@ -44,6 +48,7 @@ const Orders = () => {
           // onChange={onClickMenuItem}
         />
       </Flex>
+      <TableComponent />
     </StyledPageWrapper>
   );
 };

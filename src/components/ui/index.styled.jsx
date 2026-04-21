@@ -1,4 +1,4 @@
-import { Form, Input, Tabs } from "antd";
+import { Form, Input, Table, Tabs } from "antd";
 import styled from "styled-components";
 
 export const StyledInput = styled(Input)`
@@ -140,5 +140,20 @@ export const StyledTabWithText = styled(Tabs)`
 
   .ant-tabs-nav-operations {
     display: none !important;
+  }
+`;
+export const StyledTable = styled(Table)`
+  .ant-table-thead {
+    background: ${({ theme }) => theme.table.headerBgColor} !important;
+  }
+  .ant-table-cell {
+    background: transparent !important;
+    padding: 8px 16px !important;
+  }
+  .ant-table-row {
+    &:hover {
+      background: ${({ theme }) => theme.table.cellHoverBgColor} !important;
+      cursor: pointer;
+    }
   }
 `;

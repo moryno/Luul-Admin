@@ -87,6 +87,10 @@ export const defaultTheme = {
     headerMenu: {
       headerMenuSelectedBgColor: "#F3F4F6",
     },
+    table: {
+      headerBgColor: "#f6f6f6",
+      cellHoverBgColor: "#F0E6C2",
+    },
     breadcrumbs: {
       height: 38,
     },

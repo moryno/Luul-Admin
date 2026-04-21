@@ -1,5 +1,7 @@
-import { Tag } from "antd";
+import { Tag, Flex, Typography } from "antd";
 import styled from "styled-components";
+
+const { Title } = Typography;
 
 export const StyledNewTag = styled(Tag)`
   background-color: red !important;
@@ -7,3 +9,8 @@ export const StyledNewTag = styled(Tag)`
   text-transform: capitalize !important;
   font-weight: bold !important;
 `;
+
+export const StyledPageWrapper = styled(Flex)`
+  padding: 16px;
+`;
+export const StyledPageTitle = styled(Title)``;

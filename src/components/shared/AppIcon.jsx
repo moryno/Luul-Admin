@@ -21,7 +21,6 @@ const AppIcon = ({
 
 const StyledIconWrapper = styled.div`
   display: inline-flex;
-  display: inline-flex;
   align-items: center;
   justify-content: center;
 

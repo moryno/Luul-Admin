@@ -81,7 +81,7 @@ select:-webkit-autofill {
 
 .ant-input-affix-wrapper > input.ant-input:focus,
 .ant-input-outlined:focus-within {
-  border-width: 2px !important;
+  border-width: 1px !important;
 }
 
 .ant-btn-primary {

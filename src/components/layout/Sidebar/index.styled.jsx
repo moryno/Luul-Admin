@@ -30,7 +30,13 @@ export const StyledVerticalNav = styled.div`
       border-top-left-radius: 0px !important;
       border-bottom-left-radius: 0px !important;
       border-left: 2px solid #195038 !important;
+      svg {
+        path:not([fill="none"]) {
+          stroke: ${({ theme }) => theme.palette.primary.main} !important;
+        }
+      }
     }
+
     .ant-menu-submenu {
       .ant-menu-submenu-title {
         padding-left: 0px !important;

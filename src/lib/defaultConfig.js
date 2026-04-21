@@ -23,6 +23,7 @@ export const defaultTheme = {
       },
       white: "#FFFFFF",
       black: "#000",
+      placeholder: "#bfbfbf",
       gray: {
         25: "#FCFCFD",
         50: "#F9FAFB",

@@ -1,15 +1,20 @@
 import { Flex, Typography } from "antd";
-import { AccountContainer, IconWrapper, StyledAppHeader } from "./index.styled";
+import {
+  AccountContainer,
+  IconWrapper,
+  StyledAppHeader,
+  StyledRouteTitle,
+} from "./index.styled";
 import { AppIcon } from "@/components/shared";
 import Notify from "@assets/images/menu/notify.svg?react";
 import Account from "@assets/images/menu/profile-circle.svg?react";
 
-const { Text, Title } = Typography;
+const { Text } = Typography;
 const Navbar = () => {
   return (
     <StyledAppHeader>
       <Flex>
-        <Title level={3}>Overview</Title>
+        <StyledRouteTitle level={2}>Overview</StyledRouteTitle>
       </Flex>
       <Flex align="center" gap="medium">
         <IconWrapper>

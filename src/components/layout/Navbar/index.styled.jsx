@@ -1,7 +1,8 @@
-import { Flex, Layout } from "antd";
+import { Flex, Layout, Typography } from "antd";
 import styled from "styled-components";
 
 const { Header } = Layout;
+const { Title } = Typography;
 
 export const StyledAppHeader = styled(Header)`
   ${
@@ -51,4 +52,7 @@ export const AccountContainer = styled(Flex)`
     transition: all 0.3s ease;
   } */
   }
+`;
+export const StyledRouteTitle = styled(Title)`
+  color: ${({ theme }) => theme.palette.primary.main} !important;
 `;

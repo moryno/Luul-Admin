@@ -1,6 +1,7 @@
 export const IconTypeEnum = {
   Filter: "Filter",
   Export: "Export",
-  Add: "Add",
+  Add: "New Order",
   Search: "Search",
+  Close: "Close",
 };

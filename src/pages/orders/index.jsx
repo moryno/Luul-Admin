@@ -1,4 +1,5 @@
 import {
+  AppFlyout,
   AppIcon,
   AppTabs,
   InputComponent,
@@ -7,18 +8,42 @@ import {
   TableComponent,
   TabsWithText,
 } from "@/components";
+import { useModal } from "@/hooks";
 import {
   actionTypeOptions,
+  actionTypes,
   IconTypeEnum,
   IconTypeIconsMap,
   orderTypeOptions,
 } from "@/lib";
 import { Flex, Row, Col } from "antd";
 
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import OrderForm from "./components/OrderForm";
 
 const Orders = () => {
   const [activeTab, setActiveTab] = useState(null);
+  const { open, toggle } = useModal();
+
+  const onClickActionItem = useCallback(
+    (key) => {
+      setActiveTab(key);
+      switch (key) {
+        case actionTypes.Add:
+          toggle();
+          break;
+
+        default:
+          break;
+      }
+    },
+    [toggle],
+  );
+
+  const onCloseForm = useCallback(() => {
+    setActiveTab(null);
+    toggle();
+  }, [toggle]);
 
   return (
     <StyledPageWrapper vertical gap="large">
@@ -34,9 +59,9 @@ const Orders = () => {
         <Col xxl={16} xl={16} lg={16} md={16} sm={12} xs={12}>
           <Flex justify="flex-end">
             <AppTabs
-              // activeKey={activeTab}
+              activeKey={activeTab}
               tabItems={actionTypeOptions}
-              // onChange={onClickMenuItem}
+              onChange={onClickActionItem}
             />
           </Flex>
         </Col>
@@ -49,6 +74,14 @@ const Orders = () => {
         />
       </Flex>
       <TableComponent />
+      <AppFlyout
+        open={open}
+        onClose={onCloseForm}
+        title="Create a new Order"
+        width={700}
+      >
+        <OrderForm onClose={onCloseForm} />
+      </AppFlyout>
     </StyledPageWrapper>
   );
 };

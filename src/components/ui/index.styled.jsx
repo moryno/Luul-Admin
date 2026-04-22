@@ -1,15 +1,30 @@
-import { Form, Input, Table, Tabs } from "antd";
+import {
+  Drawer,
+  Flex,
+  Form,
+  Input,
+  Modal,
+  Table,
+  Tabs,
+  Typography,
+} from "antd";
 import styled from "styled-components";
 
+const { Title } = Typography;
+
 export const StyledInput = styled(Input)`
-  input::placeholder,
-  .ant-input::placeholder {
-    font-size: 14px;
+  &::placeholder {
+    font-size: ${({ theme }) => theme.font.size.medium};
     color: ${({ theme }) => theme.palette.placeholder};
+    font-weight: 400;
   }
 `;
 export const StyledFormItem = styled(Form.Item)`
   width: ${({ width }) => width};
+  label {
+    color: ${({ theme }) => theme.palette.primary.accentColor} !important;
+    font-weight: 500;
+  }
 `;
 export const StyledAppTabs = styled(Tabs)`
   padding: 0px;
@@ -156,4 +171,34 @@ export const StyledTable = styled(Table)`
       cursor: pointer;
     }
   }
+`;
+
+export const StyledFlyoutDrawer = styled(Drawer)`
+  .ant-drawer-body {
+    padding: 16px !important;
+    border-radius: 8px;
+  }
+  .ant-drawer-header {
+    display: none !important;
+  }
+`;
+export const StyledFlyoutHeader = styled(Flex)`
+  padding: 8px 16px 16px !important;
+  border-bottom: ${({ theme }) =>
+    `1px solid ${theme.palette.grey["Cool Grey"][200]}`};
+`;
+export const StyledFlyoutHeaderTitle = styled(Title)`
+  color: ${({ theme }) => theme.palette.primary.accentColor} !important;
+`;
+export const StyledFlyoutModal = styled(Modal)`
+  .ant-modal-content {
+    padding: 0px !important;
+    border-radius: 8px;
+  }
+  .ant-modal-header {
+    display: none !important;
+  }
+`;
+export const StyledFlyoutContent = styled.div`
+  padding: 0px 24px 16px !important;
 `;

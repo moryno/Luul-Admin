@@ -1,4 +1,4 @@
-import { Tag, Flex, Typography } from "antd";
+import { Tag, Flex, Typography, Divider } from "antd";
 import styled from "styled-components";
 
 const { Title } = Typography;
@@ -14,3 +14,10 @@ export const StyledPageWrapper = styled(Flex)`
   padding: 16px;
 `;
 export const StyledPageTitle = styled(Title)``;
+export const StyledDivider = styled(Divider)`
+  margin: 0px !important;
+  padding: 0px !important;
+  font-size: ${({ theme }) => theme.font.size.medium} !important;
+  color: ${({ theme }) => theme.palette.text.secondary} !important;
+  font-weight: 400 !important;
+`;

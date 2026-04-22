@@ -6,6 +6,7 @@ const AppIcon = ({
   hoverable = true,
   Icon,
   iconType = "stroke",
+  onClick = null,
 }) => {
   return (
     <StyledIconWrapper
@@ -13,6 +14,7 @@ const AppIcon = ({
       $size={size}
       $iconType={iconType}
       $hoverable={hoverable}
+      onClick={onClick}
     >
       <Icon />
     </StyledIconWrapper>

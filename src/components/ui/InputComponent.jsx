@@ -12,6 +12,7 @@ const InputComponent = ({
   prefix = null,
   suffix = null,
   isFormItem = false,
+  ...rest
 }) => {
   const inputComponent = useMemo(() => {
     let input;
@@ -25,6 +26,7 @@ const InputComponent = ({
             placeholder={placeholder}
             prefix={prefix}
             suffix={suffix}
+            {...rest}
           />
         </StyledFormItem>
       );
@@ -48,6 +50,7 @@ const InputComponent = ({
     name,
     placeholder,
     prefix,
+    rest,
     rule,
     size,
     suffix,

@@ -19,6 +19,7 @@ const ContainerButton = ({
   isAccent,
   shape,
   ghost = false,
+  ...rest
 }) => {
   return (
     <StyledButton
@@ -37,6 +38,7 @@ const ContainerButton = ({
       shape={shape}
       ghost={ghost}
       onClick={onClick}
+      {...rest}
     >
       {title}
     </StyledButton>
@@ -87,6 +89,7 @@ const StyledButton = styled(Button)`
   width: ${({ width }) => width};
   font-weight: 500;
   border-radius: 8px;
+  border: ${({ type }) => (type === "dashed" ? "2px" : "none")};
   svg {
     vertical-align: middle;
   }

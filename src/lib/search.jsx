@@ -13,10 +13,10 @@ export const orderTypes = {
   Cancelled: "Cancelled",
 };
 
-export const actionTypeOptions = Object.entries(actionTypes).map(([k, v]) => ({
-  key: k,
+export const actionTypeOptions = Object.values(actionTypes).map((v) => ({
+  key: v,
   label: v,
-  icon: <AppIcon Icon={IconTypeIconsMap[k]} size={16} />,
+  icon: <AppIcon Icon={IconTypeIconsMap[v]} size={16} />,
 }));
 export const orderTypeOptions = Object.values(orderTypes).map((v) => ({
   key: v,

@@ -109,7 +109,12 @@ svg {
     fill:  ${({ theme }) => theme.palette.primary.main} !important;
   }
 }
-
+ .ant-upload-list-item.ant-upload-list-item-error {
+    padding: 0px !important;
+    border: none !important;
+    overflow: hidden;
+    
+  }
 `;
 
 export default GlobalStyles;

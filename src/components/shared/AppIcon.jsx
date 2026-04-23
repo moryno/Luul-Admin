@@ -9,7 +9,7 @@ const AppIcon = ({
   onClick = null,
 }) => {
   if (!Icon) {
-    return null; // or return a fallback icon
+    return null;
   }
 
   return (

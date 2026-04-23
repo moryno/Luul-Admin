@@ -35,3 +35,15 @@ export const StyledCardSectionWrapper = styled(Col)`
 export const StyledStatCard = styled(Card)`
   height: 300px;
 `;
+export const StyledFormTitle = styled(Title)`
+  font-weight: 600 !important;
+`;
+export const StyledInfoText = styled(Text)`
+  font-weight: 400 !important;
+  font-size: ${({ theme }) => theme.font.size.medium} !important;
+  color: #1a71f6;
+`;
+export const StyledSubText = styled(Text)`
+  font-weight: 400 !important;
+  font-size: ${({ theme }) => theme.font.size.medium} !important;
+`;

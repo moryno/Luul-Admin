@@ -5,4 +5,5 @@ export const IconTypeEnum = {
   Add: "New Order",
   Search: "Search",
   Close: "Close",
+  Image: "Image",
 };

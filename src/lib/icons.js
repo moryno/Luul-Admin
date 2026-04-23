@@ -4,6 +4,7 @@ import AddIcon from "@assets/images/icons/add.svg?react";
 import ExportIcon from "@assets/images/icons/export.svg?react";
 import FilterIcon from "@assets/images/icons/filter.svg?react";
 import CloseIcon from "@assets/images/icons/close-circle.svg?react";
+import ImageIcon from "@/assets/images/icons/image.svg?react";
 
 export const IconTypeIconsMap = {
   [IconTypeEnum.Search]: SearchIcon,
@@ -12,4 +13,5 @@ export const IconTypeIconsMap = {
   [IconTypeEnum.Export]: ExportIcon,
   [IconTypeEnum.Import]: ExportIcon,
   [IconTypeEnum.Close]: CloseIcon,
+  [IconTypeEnum.Image]: ImageIcon,
 };

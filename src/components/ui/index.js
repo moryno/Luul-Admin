@@ -6,3 +6,4 @@ export { default as TableComponent } from "./TableComponent";
 export { default as AppFlyout } from "./AppFlyout";
 
 export * from "./charts";
+export * from "./Images";

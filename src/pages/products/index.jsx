@@ -3,6 +3,8 @@ import {
   StyledPageWrapper,
   StyledPageTitle,
   AppPageSearchFilter,
+  TableComponent,
+  StyledCard,
 } from "@/components";
 import { productActionTypeOptions, productActionTypes } from "@/lib";
 import ProductStats from "./components/ProductStats";
@@ -30,6 +32,9 @@ const Products = () => {
         onTabChange={onClickActionItem}
       />
       <ProductStats />
+      <StyledCard>
+        <TableComponent />
+      </StyledCard>
     </StyledPageWrapper>
   );
 };

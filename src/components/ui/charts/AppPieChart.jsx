@@ -1,5 +1,6 @@
 import { PieChart, Pie, Tooltip, Sector } from "recharts";
 import { defaultTheme } from "@/lib";
+import { StyledChartWrapper } from "../index.styled";
 
 const AppPieChart = ({ isPieChart = true }) => {
   const { theme } = defaultTheme;
@@ -39,40 +40,42 @@ const AppPieChart = ({ isPieChart = true }) => {
   };
 
   return (
-    <PieChart
-      responsive
-      style={{
-        // gridColumn: "1 / 4",
-        // gridRow: "3 / 4",
-        height: "100%",
-        width: "100%",
-        maxHeight: "200px",
-        aspectRatio: 1,
-        // margin: "0 auto",
-        border: "none",
-      }}
-    >
-      <Pie
-        data={data}
-        dataKey="value"
-        labelLine={false}
-        outerRadius={80}
-        innerRadius={isPieChart ? undefined : "60%"}
-        fill="#8884d8"
-        //   onClick={handleClick}
-        shape={renderCustomShape}
-      />
-      <Tooltip
-        contentStyle={{ borderRadius: "10px", borderColor: "lightgray" }}
-      />
-      {/* <Tooltip content={<CustomTooltip />} /> */}
-      {/* <Legend
+    <StyledChartWrapper>
+      <PieChart
+        responsive
+        style={{
+          // gridColumn: "1 / 4",
+          // gridRow: "3 / 4",
+          height: "100%",
+          width: "100%",
+          maxHeight: "200px",
+          aspectRatio: 1,
+          // margin: "0 auto",
+          border: "none",
+        }}
+      >
+        <Pie
+          data={data}
+          dataKey="value"
+          labelLine={false}
+          outerRadius={80}
+          innerRadius={isPieChart ? undefined : "60%"}
+          fill="#8884d8"
+          //   onClick={handleClick}
+          shape={renderCustomShape}
+        />
+        <Tooltip
+          contentStyle={{ borderRadius: "10px", borderColor: "lightgray" }}
+        />
+        {/* <Tooltip content={<CustomTooltip />} /> */}
+        {/* <Legend
         content={<CustomLegend />}
         align="left"
         verticalAlign="bottom"
         // wrapperStyle={{ paddingTop: "20px" }}
       /> */}
-    </PieChart>
+      </PieChart>
+    </StyledChartWrapper>
   );
 };
 

@@ -2,9 +2,8 @@ import { BrowserRouter } from "react-router-dom";
 
 import { AppThemeProvider } from "@/context";
 import { GlobalStyles } from "@/config";
-// import { Products } from "@/pages";
+import { Dashboard } from "@/pages";
 import { AppLayout } from "@/components/index";
-import ProductForm from "./pages/products/components/ProductForm";
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
         <BrowserRouter>
           <GlobalStyles />
           <AppLayout>
-            <ProductForm />
+            <Dashboard />
           </AppLayout>
         </BrowserRouter>
       </AppThemeProvider>

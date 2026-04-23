@@ -21,7 +21,11 @@ export const StyledDivider = styled(Divider)`
   color: ${({ theme }) => theme.palette.text.secondary} !important;
   font-weight: 400 !important;
 `;
-export const StyledCard = styled(Card)``;
+export const StyledCard = styled(Card)`
+  .ant-card-head {
+    border: none !important;
+  }
+`;
 export const StyledPrimaryTitle = styled(Title)`
   color: ${({ theme }) => theme.palette.primary.main} !important;
 `;

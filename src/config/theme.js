@@ -27,6 +27,7 @@ html, body, #root {
   margin: 0px !important;
   padding: 0px !important;
 }
+
   h1, h2, h3, h4, h5, h6,
   h1.ant-typography,
   h2.ant-typography,
@@ -115,6 +116,7 @@ svg {
     overflow: hidden;
     
   }
+  
 `;
 
 export default GlobalStyles;

@@ -202,3 +202,8 @@ export const StyledFlyoutModal = styled(Modal)`
 export const StyledFlyoutContent = styled.div`
   padding: 0px 24px 16px !important;
 `;
+export const StyledChartWrapper = styled(Flex)`
+  *:focus {
+    outline: none;
+  }
+`;

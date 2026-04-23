@@ -57,6 +57,7 @@ export const defaultTheme = {
         default: "#EAECF0",
         success: "#12B76A",
         error: "#F04438",
+        warning: "#E98841",
       },
       boxShadowColor: "rgba(0, 0, 0, 0.07)",
       status: {

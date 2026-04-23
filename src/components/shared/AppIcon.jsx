@@ -8,6 +8,10 @@ const AppIcon = ({
   iconType = "stroke",
   onClick = null,
 }) => {
+  if (!Icon) {
+    return null; // or return a fallback icon
+  }
+
   return (
     <StyledIconWrapper
       $color={color}

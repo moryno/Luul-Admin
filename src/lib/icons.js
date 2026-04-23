@@ -10,5 +10,6 @@ export const IconTypeIconsMap = {
   [IconTypeEnum.Add]: AddIcon,
   [IconTypeEnum.Filter]: FilterIcon,
   [IconTypeEnum.Export]: ExportIcon,
+  [IconTypeEnum.Import]: ExportIcon,
   [IconTypeEnum.Close]: CloseIcon,
 };

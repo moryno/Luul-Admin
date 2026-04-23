@@ -1,4 +1,4 @@
-import { Tag, Flex, Typography, Divider } from "antd";
+import { Tag, Flex, Typography, Divider, Card } from "antd";
 import styled from "styled-components";
 
 const { Title } = Typography;
@@ -20,4 +20,8 @@ export const StyledDivider = styled(Divider)`
   font-size: ${({ theme }) => theme.font.size.medium} !important;
   color: ${({ theme }) => theme.palette.text.secondary} !important;
   font-weight: 400 !important;
+`;
+export const StyledCard = styled(Card)``;
+export const StyledPrimaryTitle = styled(Title)`
+  color: ${({ theme }) => theme.palette.primary.main} !important;
 `;

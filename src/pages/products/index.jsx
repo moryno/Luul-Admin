@@ -3,11 +3,8 @@ import {
   StyledPageWrapper,
   StyledPageTitle,
   AppPageSearchFilter,
-  StyledCard,
-  StyledDivider,
 } from "@/components";
 import { productActionTypeOptions, productActionTypes } from "@/lib";
-import { Col, Row, Flex } from "antd";
 import ProductStats from "./components/ProductStats";
 
 const Products = () => {
@@ -28,7 +25,7 @@ const Products = () => {
     <StyledPageWrapper vertical gap="large">
       <StyledPageTitle level={3}>Product</StyledPageTitle>
       <AppPageSearchFilter
-        activeKey={activeTab}
+        activeTab={activeTab}
         tabItems={productActionTypeOptions}
         onTabChange={onClickActionItem}
       />

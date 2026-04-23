@@ -41,7 +41,7 @@ const Orders = () => {
     <StyledPageWrapper vertical gap="large">
       <StyledPageTitle level={3}>Orders</StyledPageTitle>
       <AppPageSearchFilter
-        activeKey={activeTab}
+        activeTab={activeTab}
         tabItems={orderActionTypeOptions}
         onTabChange={onClickActionItem}
       />

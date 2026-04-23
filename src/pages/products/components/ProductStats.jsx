@@ -1,7 +1,7 @@
 import {
   AppIcon,
+  AppPieChart,
   ContainerButton,
-  StyledCard,
   StyledPrimaryTitle,
 } from "@/components";
 
@@ -12,6 +12,7 @@ import {
   StyledStatTitle,
   StyledSkuText,
   StyledCardSectionWrapper,
+  StyledStatCard,
 } from "../index.styled";
 
 import RestockIcon from "@assets/images/products/restock.svg?react";
@@ -32,7 +33,7 @@ const ProductStats = () => {
         sm={24}
         xs={24}
       >
-        <StyledCard loading={false}>
+        <StyledStatCard loading={false}>
           <Row gutter={[24, 24]}>
             <StyledCardSectionWrapper
               xxl={12}
@@ -81,13 +82,18 @@ const ProductStats = () => {
               className="withBorder"
             >
               <Flex vertical>
-                <StyledStatTitle primaryBg={true}>
-                  Top Categories
-                </StyledStatTitle>
+                <Flex vertical gap="small">
+                  <StyledStatTitle primaryBg={true}>
+                    Top Categories
+                  </StyledStatTitle>
+                  <StyledSkuText type="secondary">This Week</StyledSkuText>
+                </Flex>
+
+                <AppPieChart isPieChart={false} />
               </Flex>
             </StyledCardSectionWrapper>
           </Row>
-        </StyledCard>
+        </StyledStatCard>
       </StyledCardSectionWrapper>
       <StyledCardSectionWrapper
         xxl={12}
@@ -97,7 +103,7 @@ const ProductStats = () => {
         sm={24}
         xs={24}
       >
-        <StyledCard loading={false}>
+        <StyledStatCard loading={false}>
           <Row gutter={[24, 24]}>
             <StyledCardSectionWrapper
               xxl={12}
@@ -107,7 +113,7 @@ const ProductStats = () => {
               sm={12}
               xs={12}
             >
-              <Flex vertical gap={16}>
+              <Flex vertical gap="large">
                 <StyledStatTitle primaryBg={true}>
                   Low Stock Alerts
                 </StyledStatTitle>
@@ -126,19 +132,21 @@ const ProductStats = () => {
                     <StyledSkuText type="secondary">#P-1023</StyledSkuText>
                   </Flex>
                 </Flex>
-                <Flex align="center" justify="space-between">
-                  <Flex gap="small">
-                    <AppIcon Icon={CriticalIcon} color={"#F04438"} />
-                    <StyledStatText type="danger">Critical: </StyledStatText>
+                <Flex vertical gap={16}>
+                  <Flex align="center" justify="space-between">
+                    <Flex gap="small">
+                      <AppIcon Icon={CriticalIcon} color={"#F04438"} />
+                      <StyledStatText type="danger">Critical: </StyledStatText>
+                    </Flex>
+                    <StyledStatText type="High">03 items</StyledStatText>
                   </Flex>
-                  <StyledStatText type="High">03 items</StyledStatText>
-                </Flex>
-                <Flex align="center" justify="space-between">
-                  <Flex gap="small">
-                    <AppIcon Icon={LowIcon} color={"#E98841"} />
-                    <StyledStatText type="warning">Low: </StyledStatText>
+                  <Flex align="center" justify="space-between">
+                    <Flex gap="small">
+                      <AppIcon Icon={LowIcon} color={"#E98841"} />
+                      <StyledStatText type="warning">Low: </StyledStatText>
+                    </Flex>
+                    <StyledStatText type="High">04 items</StyledStatText>
                   </Flex>
-                  <StyledStatText type="High">04 items</StyledStatText>
                 </Flex>
               </Flex>
             </StyledCardSectionWrapper>
@@ -151,7 +159,7 @@ const ProductStats = () => {
               xs={12}
               className="withBorder"
             >
-              <Flex vertical gap={16}>
+              <Flex vertical gap="large">
                 <Flex gap="small">
                   <StyledStatTitle>Below Safe Quantity</StyledStatTitle>
                   <AppIcon Icon={QuestionIcon} />
@@ -188,7 +196,7 @@ const ProductStats = () => {
               </Flex>
             </StyledCardSectionWrapper>
           </Row>
-        </StyledCard>
+        </StyledStatCard>
       </StyledCardSectionWrapper>
     </Row>
   );

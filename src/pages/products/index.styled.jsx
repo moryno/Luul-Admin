@@ -1,4 +1,4 @@
-import { Col, Typography } from "antd";
+import { Card, Col, Typography } from "antd";
 import styled from "styled-components";
 
 const { Title, Text } = Typography;
@@ -31,4 +31,7 @@ export const StyledCardSectionWrapper = styled(Col)`
     border-left: ${({ theme }) =>
       `1px solid ${theme.palette.grey["Cool Grey"][200]}`} !important;
   }
+`;
+export const StyledStatCard = styled(Card)`
+  height: 300px;
 `;

@@ -74,6 +74,15 @@ export const defaultTheme = {
         planning: "#08AEEA",
         invoiced: "#B99897",
       },
+      chart: {
+        default: "#195038",
+        main: "#04910C",
+        accent: "#F0E6C2",
+        secondary: "#FFF5C5",
+        active: "#2CC8BA",
+        completed: "#4ED3E5",
+        inProgress: "#08AEEA",
+      },
     },
 
     font: {

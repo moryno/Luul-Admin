@@ -33,3 +33,7 @@ export const StyledOverviewStatText = styled(Text)`
   font-weight: 400 !important;
   font-size: ${({ theme }) => theme.font.size.medium} !important;
 `;
+export const StyledOverviewSecondaryTitle = styled(Text)`
+  font-weight: 600 !important;
+  font-size: ${({ theme }) => theme.font.size.medium} !important;
+`;

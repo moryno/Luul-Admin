@@ -2,7 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import { AppThemeProvider } from "@/context";
 import { GlobalStyles } from "@/config";
-import { Dashboard } from "@/pages";
+import { Settings } from "@/pages";
 import { AppLayout } from "@/components/index";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <BrowserRouter>
           <GlobalStyles />
           <AppLayout>
-            <Dashboard />
+            <Settings />
           </AppLayout>
         </BrowserRouter>
       </AppThemeProvider>

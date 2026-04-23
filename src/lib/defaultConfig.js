@@ -38,6 +38,7 @@ export const defaultTheme = {
       },
       grey: {
         "Cool Grey": {
+          50: "#F1F1F1",
           100: "#F3F4F6",
           200: "#E5E7EB", // border color
         },

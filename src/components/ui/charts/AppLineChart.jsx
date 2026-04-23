@@ -23,7 +23,7 @@ const AppLineChart = () => {
     { name: "Sep", "This Month": 2780, "Last Month": 1398 },
     { name: "Oct", "This Month": 2000, "Last Month": 9800 },
     { name: "Nov", "This Month": 3908, "Last Month": 2780 },
-    { name: "Dev", "This Month": 4000, "Last Month": 3908 },
+    { name: "Dec", "This Month": 4000, "Last Month": 3908 },
   ];
 
   return (

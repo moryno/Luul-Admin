@@ -6,23 +6,26 @@ const { Text } = Typography;
 
 export const StyledAppLayout = styled(Layout)`
   width: 100%;
-  height: 100%;
-  position: fixed;
-  overflow-x: hidden;
+  height: 100vh;
+  overflow: hidden;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
 `;
 
 export const StyledAppLayoutMain = styled(Layout)`
-  transition: all 0.1s linear;
-  flex-shrink: 0;
-  position: absolute;
-  width: 100% !important;
-  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
   background: ${({ theme }) => theme.palette.background.default};
   color: ${({ theme }) => theme.palette.text.primary};
+  overflow: hidden;
 `;
 export const StyledAppLayoutContent = styled(Content)`
-  position: relative;
-  width: 100% !important;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
 `;
 export const StyledAccountContainer = styled(Menu)`
   padding: 0px !important;

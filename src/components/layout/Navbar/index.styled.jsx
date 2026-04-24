@@ -5,13 +5,11 @@ const { Header } = Layout;
 const { Title } = Typography;
 
 export const StyledAppHeader = styled(Header)`
-  ${
-    "" /* position: fixed;
+  position: sticky;
+  top: 0;
   right: 0;
   left: 0;
-  top: 0;
-  z-index: 101; */
-  }
+  z-index: 101;
   width: 100% !important;
   display: flex;
   justify-content: space-between;
@@ -20,6 +18,7 @@ export const StyledAppHeader = styled(Header)`
   background: inherit;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
   padding: 0px 16px;
+  flex-shrink: 0;
 `;
 
 export const IconWrapper = styled.div`

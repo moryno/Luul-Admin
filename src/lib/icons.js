@@ -1,4 +1,4 @@
-import { IconTypeEnum } from "./enums";
+import { IconTypeEnum, MenuIconTypeEnum } from "./enums";
 import SearchIcon from "@assets/images/icons/search.svg?react";
 import AddIcon from "@assets/images/icons/add.svg?react";
 import ExportIcon from "@assets/images/icons/export.svg?react";
@@ -11,6 +11,10 @@ import LogoutIcon from "@/assets/images/icons/sign-out.svg?react";
 import NotificationIcon from "@assets/images/menu/notify.svg?react";
 import InventoryIcon from "@/assets/images/icons/inventory.svg?react";
 import OrderIcon from "@/assets/images/icons/order-history.svg?react";
+import OverviewIcon from "@/assets/images/menu/overview.svg?react";
+import OrdersMenuIcon from "@/assets/images/menu/orders.svg?react";
+import ProductIcon from "@/assets/images/menu/products.svg?react";
+import SettingsIcon from "@/assets/images/menu/settings.svg?react";
 
 export const IconTypeIconsMap = {
   [IconTypeEnum.Search]: SearchIcon,
@@ -26,4 +30,11 @@ export const IconTypeIconsMap = {
   [IconTypeEnum.Notification]: NotificationIcon,
   [IconTypeEnum.Order]: OrderIcon,
   [IconTypeEnum.Inventory]: InventoryIcon,
+};
+
+export const MenuTypeIconsMap = {
+  [MenuIconTypeEnum.Overview]: OverviewIcon,
+  [MenuIconTypeEnum.Product]: ProductIcon,
+  [MenuIconTypeEnum.Order]: OrdersMenuIcon,
+  [MenuIconTypeEnum.Settings]: SettingsIcon,
 };

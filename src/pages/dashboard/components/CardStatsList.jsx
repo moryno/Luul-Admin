@@ -16,15 +16,15 @@ const CardStatsList = () => {
       <Col span={6}>
         <StyledOverviewStatCard>
           <StyledStatCardWrapper
-            background={true}
+            $background={true}
             vertical
             justify="space-between"
           >
-            <StyledStatCardTitle background={true}>
+            <StyledStatCardTitle $background={true}>
               Total Revenue
             </StyledStatCardTitle>
             <Flex align="center" justify="space-between">
-              <StyledStatCount level={2} background={true}>
+              <StyledStatCount level={2} $background={true}>
                 4,563
               </StyledStatCount>
               <Flex vertical>
@@ -32,7 +32,7 @@ const CardStatsList = () => {
                   <AppIcon Icon={UpIcon} color="#09DE13" />
                   <StyledStatText type="success">+12.6%</StyledStatText>
                 </Flex>
-                <StyledOverviewStatText background={true}>
+                <StyledOverviewStatText $background={true}>
                   From last week
                 </StyledOverviewStatText>
               </Flex>

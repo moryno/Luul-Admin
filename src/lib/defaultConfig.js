@@ -131,6 +131,7 @@ export const defaultTheme = {
       sidebarMenuSelectedTextColor: "#195038",
       sidebarMenuHoverBgColor: "#F0E6C2",
       sidebarMenuHoverTextColor: "#195038",
+      width: 240,
     },
     mobileMenu: {
       height: 60,

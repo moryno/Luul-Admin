@@ -4,8 +4,7 @@ import { Layout } from "antd";
 const { Content } = Layout;
 
 export const StyledMainContentView = styled(Content)`
-  position: relative;
-  height: 100%;
+  min-height: 100%;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
     width: 100% !important;
   }

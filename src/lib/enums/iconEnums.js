@@ -13,3 +13,10 @@ export const IconTypeEnum = {
   Order: "Order",
   Inventory: "Inventory",
 };
+
+export const MenuIconTypeEnum = {
+  Overview: "Overview",
+  Product: "Product",
+  Order: "Order",
+  Settings: "Settings",
+};

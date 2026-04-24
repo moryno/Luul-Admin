@@ -2,7 +2,6 @@ import { BrowserRouter } from "react-router-dom";
 
 import { AppThemeProvider } from "@/context";
 import { GlobalStyles } from "@/config";
-import { Settings } from "@/pages";
 import { AppLayout } from "@/components/index";
 
 function App() {
@@ -11,9 +10,7 @@ function App() {
       <AppThemeProvider>
         <BrowserRouter>
           <GlobalStyles />
-          <AppLayout>
-            <Settings />
-          </AppLayout>
+          <AppLayout />
         </BrowserRouter>
       </AppThemeProvider>
     </>

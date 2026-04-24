@@ -1,8 +1,19 @@
 import styled from "styled-components";
 
 export const SiderContainer = styled.div`
-  background: ${({ theme }) => theme.sideBar.sidebarBgColor};
-  padding: 0px 16px;
+  height: 100vh;
+  flex-shrink: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ant-layout-sider {
+    height: 100%;
+    background: ${({ theme }) => theme.sideBar.sidebarBgColor} !important;
+  }
 `;
 
 export const StyledVerticalNav = styled.div`

@@ -6,11 +6,15 @@ import {
 } from "./index.styled";
 import AppNotification from "../components/AppNotification";
 import AppAccount from "../components/AppAccount";
+import { useLocation } from "react-router-dom";
+import { getPageTitle } from "@/helpers";
 
 const Navbar = () => {
+  const { pathname } = useLocation();
+
   return (
     <StyledAppHeader>
-      <StyledRouteTitle level={2}>Overview</StyledRouteTitle>
+      <StyledRouteTitle level={2}>{getPageTitle(pathname)}</StyledRouteTitle>
       <StyledHorizontalNav>
         <Flex align="center" gap="middle">
           <AppNotification />

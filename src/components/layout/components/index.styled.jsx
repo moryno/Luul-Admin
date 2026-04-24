@@ -1,3 +1,4 @@
+import { AppScrollbar } from "@/components/shared";
 import { Avatar, Flex, Layout, Menu, Typography } from "antd";
 import { Content } from "antd/es/layout/layout";
 import styled from "styled-components";
@@ -24,9 +25,31 @@ export const StyledAppLayoutMain = styled(Layout)`
 `;
 export const StyledAppLayoutContent = styled(Content)`
   flex: 1;
-  overflow-y: auto;
   overflow-x: hidden;
 `;
+
+export const StyledAppLayoutContentScrollbar = styled(AppScrollbar)`
+  overflow-x: hidden;
+  height: ${({ theme }) => `calc(100svh - ${theme.header.height}px)`};
+
+  .simplebar-scrollbar::before {
+    background: ${({ theme }) => theme.palette.primary.main};
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.xxl}px) {
+    padding: 0px calc(50% - 624px) 32px calc(50% - 624px);
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
+    padding: 0px 16px 16px 16px;
+    height: ${({ theme }) => `calc(100svh - ${theme.header.height}px)`};
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.xxs}px) {
+    padding: 0px 10px 10px 10px;
+  }
+`;
+
 export const StyledAccountContainer = styled(Menu)`
   padding: 0px !important;
   background: inherit;

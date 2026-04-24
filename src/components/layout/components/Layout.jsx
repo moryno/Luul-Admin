@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import {
   StyledAppLayout,
   StyledAppLayoutContent,
+  StyledAppLayoutContentScrollbar,
   StyledAppLayoutMain,
 } from "./index.styled";
 import Navbar from "../Navbar";
@@ -15,7 +16,9 @@ const Layout = ({ routes, routesConfig }) => {
       <StyledAppLayoutMain>
         <Navbar />
         <StyledAppLayoutContent>
-          <ContentView routes={routes} />
+          <StyledAppLayoutContentScrollbar>
+            <ContentView routes={routes} />
+          </StyledAppLayoutContentScrollbar>
         </StyledAppLayoutContent>
       </StyledAppLayoutMain>
     </StyledAppLayout>

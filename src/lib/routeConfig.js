@@ -2,6 +2,9 @@ import OverviewIcon from "@/assets/images/menu/overview.svg?react";
 import OrdersIcon from "@/assets/images/menu/orders.svg?react";
 import ProductIcon from "@/assets/images/menu/products.svg?react";
 import SettingsIcon from "@/assets/images/menu/settings.svg?react";
+import Account from "@assets/images/menu/profile-circle.svg?react";
+import Notify from "@assets/images/menu/notify.svg?react";
+
 import {
   DASHBOARD_ROUTE,
   ORDERS_ROUTE,
@@ -39,3 +42,20 @@ export const routesConfig = [
     icon: SettingsIcon,
   },
 ];
+// export const horizontalRoutesConfig = [
+//   {
+//     id: "notification",
+//     title: "",
+//     messageId: "sidebar.notification",
+//     // path: DASHBOARD_ROUTE,
+//     icon: Account,
+//     type: "collapse",
+//   },
+//   {
+//     id: "account",
+//     title: "",
+//     messageId: "sidebar.account",
+//     // path: ORDERS_ROUTE,
+//     icon: Notify,
+//   },
+// ];

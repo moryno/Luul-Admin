@@ -5,6 +5,12 @@ import ExportIcon from "@assets/images/icons/export.svg?react";
 import FilterIcon from "@assets/images/icons/filter.svg?react";
 import CloseIcon from "@assets/images/icons/close-circle.svg?react";
 import ImageIcon from "@/assets/images/icons/image.svg?react";
+import AccountIcon from "@assets/images/menu/profile-circle.svg?react";
+import ProfileIcon from "@/assets/images/icons/user.svg?react";
+import LogoutIcon from "@/assets/images/icons/sign-out.svg?react";
+import NotificationIcon from "@assets/images/menu/notify.svg?react";
+import InventoryIcon from "@/assets/images/icons/inventory.svg?react";
+import OrderIcon from "@/assets/images/icons/order-history.svg?react";
 
 export const IconTypeIconsMap = {
   [IconTypeEnum.Search]: SearchIcon,
@@ -14,4 +20,10 @@ export const IconTypeIconsMap = {
   [IconTypeEnum.Import]: ExportIcon,
   [IconTypeEnum.Close]: CloseIcon,
   [IconTypeEnum.Image]: ImageIcon,
+  [IconTypeEnum.Account]: AccountIcon,
+  [IconTypeEnum.User]: ProfileIcon,
+  [IconTypeEnum.LogOut]: LogoutIcon,
+  [IconTypeEnum.Notification]: NotificationIcon,
+  [IconTypeEnum.Order]: OrderIcon,
+  [IconTypeEnum.Inventory]: InventoryIcon,
 };

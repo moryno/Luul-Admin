@@ -37,22 +37,11 @@ export const IconWrapper = styled.div`
     transition: all 0.3s ease;
   }
 `;
-export const AccountContainer = styled(Flex)`
-  ${
-    "" /* display: flex;
-  align-items: center;
-  gap: center;
-  padding: 8px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: ${({ theme }) => theme.palette.icon.background};
-  &:hover {
-    background: ${({ theme }) => theme.palette.green["50"]};
-    transition: all 0.3s ease;
-  } */
-  }
-`;
+export const AccountContainer = styled(Flex)``;
 export const StyledRouteTitle = styled(Title)`
   color: ${({ theme }) => theme.palette.primary.main} !important;
+`;
+export const StyledHorizontalNav = styled.div`
+  display: flex;
+  align-items: center;
 `;

@@ -6,4 +6,10 @@ export const IconTypeEnum = {
   Search: "Search",
   Close: "Close",
   Image: "Image",
+  Account: "Account",
+  User: "User",
+  LogOut: "LogOut",
+  Notification: "Notification",
+  Order: "Order",
+  Inventory: "Inventory",
 };

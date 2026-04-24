@@ -35,19 +35,6 @@ export const StyledAppLayoutContentScrollbar = styled(AppScrollbar)`
   .simplebar-scrollbar::before {
     background: ${({ theme }) => theme.palette.primary.main};
   }
-
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.xxl}px) {
-    padding: 0px calc(50% - 624px) 32px calc(50% - 624px);
-  }
-
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
-    padding: 0px 16px 16px 16px;
-    height: ${({ theme }) => `calc(100svh - ${theme.header.height}px)`};
-  }
-
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.xxs}px) {
-    padding: 0px 10px 10px 10px;
-  }
 `;
 
 export const StyledAccountContainer = styled(Menu)`

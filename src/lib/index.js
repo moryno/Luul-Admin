@@ -6,3 +6,4 @@ export * from "./icons";
 export * from "./enums";
 export * from "./search";
 export * from "./AppRoutes";
+export * from "./providers";

@@ -101,8 +101,8 @@ export const generateRoutes = (structure) => {
         <Navigate
           to={
             isAuthenticated
-              ? unAuthorizedStructure.fallbackPath
-              : authorizedStructure.fallbackPath
+              ? authorizedStructure.fallbackPath
+              : unAuthorizedStructure.fallbackPath
           }
           replace
         />

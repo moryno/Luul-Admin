@@ -13,7 +13,7 @@ import { useRoutes } from "react-router-dom";
 import { Login } from "@/pages";
 
 const AppLayout = () => {
-  const { isAuthenticated, user } = useAuthUser();
+  const { isAuthenticated } = useAuthUser();
 
   const generatedRoutes = useMemo(() => {
     return generateRoutes({

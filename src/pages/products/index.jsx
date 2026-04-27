@@ -6,22 +6,32 @@ import {
   TableComponent,
   StyledCard,
 } from "@/components";
-import { productActionTypeOptions, productActionTypes } from "@/lib";
+import {
+  productActionTypeOptions,
+  productActionTypes,
+  PRODUCTS_ROUTE,
+} from "@/lib";
 import ProductStats from "./components/ProductStats";
+import { useCommon } from "@/hooks";
 
 const Products = () => {
   const [activeTab, setActiveTab] = useState(null);
+  const { onRedirect } = useCommon();
 
-  const onClickActionItem = useCallback((key) => {
-    setActiveTab(key);
-    switch (key) {
-      case productActionTypes.Add:
-        break;
+  const onClickActionItem = useCallback(
+    (key) => {
+      setActiveTab(key);
+      switch (key) {
+        case productActionTypes.Add:
+          onRedirect(`${PRODUCTS_ROUTE}/new`)();
+          break;
 
-      default:
-        break;
-    }
-  }, []);
+        default:
+          break;
+      }
+    },
+    [onRedirect],
+  );
 
   return (
     <StyledPageWrapper vertical gap="large">

@@ -39,6 +39,7 @@ const InputComponent = ({
           placeholder={placeholder}
           prefix={prefix}
           suffix={suffix}
+          {...rest}
         />
       );
     }

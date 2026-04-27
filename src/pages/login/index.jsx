@@ -11,11 +11,27 @@ import {
   StyledLoginFormItem,
   StyledLoginButton,
 } from "./index.styled";
+import { useAuth } from "@/hooks";
+import { useCallback } from "react";
 
 const Login = () => {
+  const { login, loginError, isLoginLoading } = useAuth();
+
+  const onFinish = useCallback(
+    async (values) => {
+      login(values);
+    },
+    [login],
+  );
+
   return (
     <StyledLoginContainer align="center" justify="center">
-      <StyledLoginForm name="basic" autoComplete="off" layout="vertical">
+      <StyledLoginForm
+        name="basic"
+        autoComplete="off"
+        layout="vertical"
+        onFinish={onFinish}
+      >
         <StyledLoginFormHeader
           vertical
           align="center"
@@ -26,7 +42,9 @@ const Login = () => {
           <StyledLoginFormSubtitle>
             Sign in to your account
           </StyledLoginFormSubtitle>
-          {/* { error && <StyledLoginFormError> { error.message}</StyledLoginFormError>} */}
+          {loginError && (
+            <StyledLoginFormError> {loginError.message}</StyledLoginFormError>
+          )}
         </StyledLoginFormHeader>
         <StyledLoginFormItem
           name="email"
@@ -49,7 +67,7 @@ const Login = () => {
             htmlType="submit"
             size="large"
             fullWidth
-            // loading={loading}
+            loading={isLoginLoading}
           />
         </Form.Item>
       </StyledLoginForm>

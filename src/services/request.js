@@ -3,7 +3,7 @@ import axios from "axios";
 import { LOGIN_API } from "./api";
 
 const request = axios.create({
-  baseURL: "",
+  baseURL: "http://localhost:8080",
 });
 
 const handleSuccessResponse = (response) => {

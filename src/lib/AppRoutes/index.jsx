@@ -9,7 +9,7 @@ import { settingsRoutes } from "./Settings";
 import { authRoutes } from "./AuthRoute";
 
 const authorizedStructure = {
-  fallbackPath: LOGIN_ROUTE,
+  fallbackPath: SETTINGS_ROUTE,
   routes: [
     ...dashboardRoutes,
     ...ordersRoutes,
@@ -32,7 +32,7 @@ const anonymousStructure = {
 };
 
 const alwaysStructure = {
-  fallbackPath: SETTINGS_ROUTE,
+  fallbackPath: LOGIN_ROUTE,
   routes: [...authRoutes],
 };
 

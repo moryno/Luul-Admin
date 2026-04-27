@@ -1,11 +1,11 @@
 export const useAuthUser = () => {
   // const user = useSelector((store) => store.auth.user);
-  const user = {
-    fullName: "James Wanyoike",
-    email: "james@live.com",
-    address: "Muthaiga",
-  };
-
+  // const user = {
+  //   fullName: "James Wanyoike",
+  //   email: "james@live.com",
+  //   address: "Muthaiga",
+  // };
+  const user = null;
   return {
     isAuthenticated: !!user,
     user,

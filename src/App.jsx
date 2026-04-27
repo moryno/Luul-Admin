@@ -8,16 +8,16 @@ import { QueryProvider } from "./lib";
 
 function App() {
   return (
-    <StoreProvider>
-      <AppThemeProvider>
+    <AppThemeProvider>
+      <StoreProvider>
         <QueryProvider>
           <BrowserRouter>
             <GlobalStyles />
             <AppLayout />
           </BrowserRouter>
         </QueryProvider>
-      </AppThemeProvider>
-    </StoreProvider>
+      </StoreProvider>
+    </AppThemeProvider>
   );
 }
 

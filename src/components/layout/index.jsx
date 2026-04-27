@@ -10,6 +10,7 @@ import { useAuthUser } from "@/hooks";
 import { useMemo } from "react";
 import { generateRoutes } from "@/helpers";
 import { useRoutes } from "react-router-dom";
+import { Login } from "@/pages";
 
 const AppLayout = () => {
   const { isAuthenticated, user } = useAuthUser();
@@ -26,7 +27,11 @@ const AppLayout = () => {
 
   const routes = useRoutes(generatedRoutes);
 
-  return <Layout routes={routes} routesConfig={routesConfig} />;
+  return isAuthenticated ? (
+    <Layout routes={routes} routesConfig={routesConfig} />
+  ) : (
+    <Login />
+  );
 };
 
 export default AppLayout;

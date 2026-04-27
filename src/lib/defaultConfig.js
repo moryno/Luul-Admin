@@ -45,12 +45,15 @@ export const defaultTheme = {
       },
       green: {
         50: "#F0FDF4",
+        100: "#A8D5B5",
         200: "#d0f8ab",
         600: "#16A34A",
         700: "#15803D",
         900: "#14532D",
       },
       error: {
+        100: "#FFE2E2",
+        500: "#F97970",
         600: "#D92D20",
       },
       orange: "#FF6400",

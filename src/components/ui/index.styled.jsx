@@ -4,6 +4,7 @@ import {
   Form,
   Input,
   Modal,
+  Select,
   Table,
   Tabs,
   Typography,
@@ -19,6 +20,14 @@ export const StyledInput = styled(Input)`
     font-weight: 400;
   }
 `;
+export const StyledSelect = styled(Select)`
+  &::placeholder {
+    font-size: ${({ theme }) => theme.font.size.medium};
+    color: ${({ theme }) => theme.palette.placeholder};
+    font-weight: 400;
+  }
+`;
+
 export const StyledFormItem = styled(Form.Item)`
   width: ${({ width }) => width};
   label {

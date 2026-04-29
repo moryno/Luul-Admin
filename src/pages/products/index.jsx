@@ -12,11 +12,14 @@ import {
   PRODUCTS_ROUTE,
 } from "@/lib";
 import ProductStats from "./components/ProductStats";
-import { useCommon } from "@/hooks";
+import { useCommon, useProducts } from "@/hooks";
+import { productColumns } from "./columns";
 
 const Products = () => {
   const [activeTab, setActiveTab] = useState(null);
   const { onRedirect } = useCommon();
+  const { products, totalProducts, currentPage, totalPages, isLoading } =
+    useProducts({ page: 0, size: 10 });
 
   const onClickActionItem = useCallback(
     (key) => {
@@ -33,6 +36,8 @@ const Products = () => {
     [onRedirect],
   );
 
+  console.log(products);
+
   return (
     <StyledPageWrapper vertical gap="large">
       <StyledPageTitle level={3}>Product</StyledPageTitle>
@@ -43,7 +48,11 @@ const Products = () => {
       />
       <ProductStats />
       <StyledCard>
-        <TableComponent />
+        <TableComponent
+          dataSource={products || []}
+          columns={productColumns}
+          loading={isLoading}
+        />
       </StyledCard>
     </StyledPageWrapper>
   );

@@ -1,4 +1,4 @@
-import logoUrl from "@/assets/images/errors/something-wrong.svg?react";
+import logoUrl from "@/assets/images/errors/something-wrong.svg";
 
 const ErrorIcon = () => {
   return (

@@ -22,7 +22,7 @@ const StyledAppLoader = styled.div`
 const AppLoader = ({ position = "absolute", height = "100%" }) => {
   return (
     <StyledAppLoader position={position} height={height}>
-      <GridLoader color={defaultTheme.theme.palette.primary.main} size={20} />
+      <GridLoader color={defaultTheme.theme.palette.primary.main} size={16} />
     </StyledAppLoader>
   );
 };

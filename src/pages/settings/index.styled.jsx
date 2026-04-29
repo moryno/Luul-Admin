@@ -1,4 +1,4 @@
-import { Tag, Flex, Typography, Divider, Card, Button, Avatar } from "antd";
+import { Typography, Button, Avatar } from "antd";
 import styled from "styled-components";
 
 const { Title, Text } = Typography;

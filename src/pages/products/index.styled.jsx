@@ -1,4 +1,4 @@
-import { Card, Col, Typography } from "antd";
+import { Card, Col, Flex, Tag, Typography } from "antd";
 import styled from "styled-components";
 
 const { Title, Text } = Typography;
@@ -46,4 +46,21 @@ export const StyledInfoText = styled(Text)`
 export const StyledSubText = styled(Text)`
   font-weight: 400 !important;
   font-size: ${({ theme }) => theme.font.size.medium} !important;
+`;
+export const StyledProductColumn = styled(Flex)``;
+export const StyledProductColTitleWrapper = styled(Flex)`
+  span:first-child {
+    color: #1a71f6;
+    font-size: ${({ theme }) => theme.font.size.small} !important;
+  }
+`;
+export const StyledProductColTitle = styled(Text)`
+  font-weight: 400 !important;
+  font-size: ${({ theme }) => theme.font.size.medium} !important;
+`;
+export const StyledAvailabilityStatus = styled(Tag)`
+  padding: 8px;
+  font-weight: 500;
+  font-size: ${({ theme }) => theme.font.size.medium};
+  border-radius: 10px;
 `;

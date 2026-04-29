@@ -1,3 +1,4 @@
+import { Flex } from "antd";
 import styled from "styled-components";
 
 export const SiderContainer = styled.div`
@@ -14,6 +15,9 @@ export const SiderContainer = styled.div`
     height: 100%;
     background: ${({ theme }) => theme.sideBar.sidebarBgColor} !important;
   }
+`;
+export const StyleLogoContainer = styled(Flex)`
+  padding: 0px 8px;
 `;
 
 export const StyledVerticalNav = styled.div`

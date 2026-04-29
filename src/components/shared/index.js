@@ -4,5 +4,6 @@ export { default as AppPageSearchFilter } from "./AppPageSearchFilter";
 export { default as AppLoader } from "./AppLoader";
 export { default as AppSuspense } from "./AppSuspense";
 export { default as AppScrollbar } from "./AppScrollbar";
+export { default as Breadcrumbs } from "./Breadcrumbs";
 
 export * from "./StyledComponents";

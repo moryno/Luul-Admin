@@ -46,10 +46,20 @@ export const getPageTitle = (path) => {
   }
   const pathname = path
     .split("/")
-    .filter((arr) => !!arr)
+    .filter((arr) => !!arr)[0]
     .toString();
 
   if (!pathname) return "Login";
 
   return getTitleCaseSentence(pathname);
+};
+export const decodeParams = (encodedName) => {
+  if (!encodedName) return encodedName;
+
+  try {
+    return decodeURIComponent(encodedName.replace(/\+/g, " "));
+  } catch (e) {
+    console.log(e);
+    return encodedName.replace(/%20/g, " ");
+  }
 };

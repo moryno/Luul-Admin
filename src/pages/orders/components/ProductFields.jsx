@@ -1,7 +1,11 @@
 import { useCallback } from "react";
 import { Col, Flex, Form, Row, Typography } from "antd";
 import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
-import { ContainerButton, InputComponent, StyledDivider } from "@/components";
+import {
+  InputComponent,
+  StyledDashedButton,
+  StyledDivider,
+} from "@/components";
 import { StyledProductSummary } from "../index.styled";
 
 const { Text } = Typography;
@@ -74,10 +78,9 @@ const ProductFields = () => {
             <>
               {getFormFields(fields, remove)}
               <Form.Item>
-                <ContainerButton
-                  type="dashed"
+                <StyledDashedButton
                   size="large"
-                  block
+                  fullWidth
                   onClick={() => add()}
                   icon={<PlusOutlined />}
                   title="Add another product"

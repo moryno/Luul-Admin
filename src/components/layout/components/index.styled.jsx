@@ -1,6 +1,7 @@
 import { AppScrollbar } from "@/components/shared";
 import { Avatar, Flex, Layout, Menu, Typography } from "antd";
 import { Content } from "antd/es/layout/layout";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const { Text } = Typography;
@@ -139,7 +140,7 @@ export const StyledProfileLabel = styled.span`
   font-size: ${({ theme }) => theme.font.size.medium};
   color: ${({ theme }) => theme.palette.primary.main} !important;
 `;
-export const StyledMenuItemLabel = styled.span`
+export const StyledMenuItemLabel = styled(Link)`
   font-weight: 500;
   font-size: ${({ theme }) => theme.font.size.medium};
 `;

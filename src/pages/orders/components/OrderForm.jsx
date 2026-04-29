@@ -1,4 +1,4 @@
-import { ContainerButton } from "@/components";
+import { ContainerButton, StyledSecondaryButton } from "@/components";
 import { Flex, Form, Space, Steps, Typography } from "antd";
 import { useCallback, useMemo, useState } from "react";
 import CustomerFields from "./CustomerFields";
@@ -31,7 +31,11 @@ const FormButtonComponent = ({ step, handleStep, onClose }) => {
         <Text type="secondary">{`Step ${step + 1} out of 3`}</Text>
       </Flex>
       <Space>
-        <ContainerButton title="Cancel" type="ghost" onClick={onClose} />
+        <StyledSecondaryButton
+          size="default"
+          title="Cancel"
+          onClick={onClose}
+        />
         <ContainerButton
           title="Continue"
           type="primary"

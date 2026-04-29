@@ -1,5 +1,6 @@
 import { Tag, Flex, Typography, Divider, Card } from "antd";
 import styled from "styled-components";
+import { ContainerButton } from "../ui";
 
 const { Title } = Typography;
 
@@ -28,4 +29,25 @@ export const StyledCard = styled(Card)`
 `;
 export const StyledPrimaryTitle = styled(Title)`
   color: ${({ theme }) => theme.palette.primary.main} !important;
+`;
+export const StyledSecondaryButton = styled(ContainerButton)`
+  border: 1px solid ${({ theme }) => theme.palette.primary.main};
+  background: transparent;
+  color: ${({ theme }) => theme.palette.primary.main};
+  transition: all 0.2s ease;
+  &:hover {
+    background: ${({ theme }) => theme.palette.primary.main} !important;
+    color: ${({ theme }) => theme.palette.white} !important;
+  }
+`;
+export const StyledDashedButton = styled(ContainerButton)`
+  border: 1px dashed ${({ theme }) => theme.palette.primary.main};
+  background: transparent;
+  color: ${({ theme }) => theme.palette.primary.main};
+  transition: all 0.2s ease;
+  &:hover {
+    background: ${({ theme }) => theme.palette.white} !important;
+    color: ${({ theme }) => theme.palette.primary.main} !important;
+    border: 1px solid ${({ theme }) => theme.palette.primary.main};
+  }
 `;

@@ -1,7 +1,7 @@
-import { Flex, Layout } from "antd";
+import { Layout } from "antd";
 import PropTypes from "prop-types";
 
-import { SiderContainer } from "./index.styled";
+import { SiderContainer, StyleLogoContainer } from "./index.styled";
 import { AppLogo } from "@/components/shared";
 import AppVerticalNav from "./AppVerticalNav";
 
@@ -11,9 +11,9 @@ const Sidebar = ({ routesConfig = [] }) => {
   return (
     <SiderContainer>
       <Sider width={240} theme="light">
-        <Flex>
+        <StyleLogoContainer>
           <AppLogo />
-        </Flex>
+        </StyleLogoContainer>
         <AppVerticalNav routesConfig={routesConfig} />
       </Sider>
     </SiderContainer>

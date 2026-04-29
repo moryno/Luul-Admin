@@ -1,3 +1,4 @@
+import { useCallback, useMemo } from "react";
 import {
   StyledPageWrapper,
   StyledPageTitle,
@@ -6,6 +7,8 @@ import {
   UploadImage,
   ContainerButton,
   SelectComponent,
+  StyledSecondaryButton,
+  Breadcrumbs,
 } from "@/components";
 import { Col, Flex, Form, Row } from "antd";
 import {
@@ -13,26 +16,47 @@ import {
   StyledInfoText,
   StyledSubText,
 } from "../index.styled";
-import { productSizeAttributes } from "@/lib";
+import { PRODUCTS_ROUTE, productSizeAttributes } from "@/lib";
 import { useCategories } from "@/hooks";
-import { getTitleCaseSentence } from "@/helpers";
+import { decodeParams, getTitleCaseSentence } from "@/helpers";
+import { useLocation } from "react-router-dom";
 
 const ProductForm = () => {
   const { categories, isLoading } = useCategories();
+  const { pathname } = useLocation();
+  const decodedSlug = decodeParams(pathname.split("/")[2]);
+  const categoryOptions = useMemo(
+    () =>
+      categories.map((cat) => {
+        if (cat)
+          return {
+            label: getTitleCaseSentence(cat.name),
+            value: cat.id,
+          };
+        return [];
+      }),
+    [categories],
+  );
 
-  const categoryOptions = categories.map((cat) => {
-    if (cat)
-      return {
-        label: getTitleCaseSentence(cat.name),
-        value: cat.id,
-      };
-    return [];
-  });
+  const onFinish = useCallback(async (values) => {
+    const { size, sku, quantity, category, ...resValues } = values;
+    // const variants =
+    // const payload = {
+    //   ...resValues
+    // }
+  }, []);
+
+  const urlToNameMap = useMemo(() => {
+    return {
+      ...BreadCrumbsMap,
+      [`${PRODUCTS_ROUTE}/${decodedSlug}`]: `${getTitleCaseSentence(decodedSlug)} Product`,
+    };
+  }, [decodedSlug]);
 
   return (
     <StyledPageWrapper vertical gap="large">
-      <StyledPageTitle level={3}>Product</StyledPageTitle>
-      <Form layout="vertical">
+      <Breadcrumbs urlToNameMap={urlToNameMap} />
+      <Form layout="vertical" onFinish={onFinish}>
         <Row gutter={[24, 24]}>
           <Col span={12}>
             <StyledCard>
@@ -141,15 +165,12 @@ const ProductForm = () => {
                 </Flex>
                 <UploadImage />
                 <Flex align="center" justify="space-between">
-                  <ContainerButton
-                    title="Discard Changes"
-                    type="ghost"
-                    size="large"
-                  />
+                  <StyledSecondaryButton title="Discard Changes" size="large" />
                   <ContainerButton
                     title="Save Changes"
                     type="primary"
                     size="large"
+                    htmlType="submit"
                   />
                 </Flex>
               </Flex>
@@ -160,5 +181,7 @@ const ProductForm = () => {
     </StyledPageWrapper>
   );
 };
-
+const BreadCrumbsMap = {
+  [PRODUCTS_ROUTE]: "Products",
+};
 export default ProductForm;

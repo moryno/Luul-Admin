@@ -30,6 +30,7 @@ export const IconTypeIconsMap = {
   [IconTypeEnum.Notification]: NotificationIcon,
   [IconTypeEnum.Order]: OrderIcon,
   [IconTypeEnum.Inventory]: InventoryIcon,
+  [IconTypeEnum.ArrowRight]: InventoryIcon,
 };
 
 export const MenuTypeIconsMap = {

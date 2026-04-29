@@ -89,7 +89,8 @@ const StyledButton = styled(Button)`
   width: ${({ width }) => width};
   font-weight: 500;
   border-radius: 8px;
-  border: ${({ type }) => (type === "dashed" ? "2px" : "none")};
+  border: none;
+  transition: all 0.2s ease;
   svg {
     vertical-align: middle;
   }
